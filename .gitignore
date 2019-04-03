@@ -27,6 +27,11 @@ xduthesis*.zip
 # Emacs generated files
 auto/
 
+# real file
+parted/
+main.tex
+main.pdf
+
 # SCons generated files
 .sconsign.dblite
 
