@@ -1,20 +1,5 @@
-%%
-%% This is file `xduthesis.cls',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% xduthesis.dtx  (with options: `class')
-%% ---------:| ---------------------------------------------------------------
-%% xduthesis:| XeLaTeX template for writing Xidian University Thesis
-%%    Author:| Fei Qi
-%%    E-mail:| fred.qi@ieee.org
-%%   License:| Released under the LaTeX Project Public License v1.3c or later
-%%       See:| http://www.latex-project.org/lppl.txt
-%%
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{xduthesis}
-    [2015/09/11 1.0.0 Xidian University Thesis Template]
 \hyphenation{XDU-Thesis}
 \def\xduthesis{$\mathbb{XDU}$-$\mathcal{THESIS}$}
 \def\version{1.0.0}
@@ -333,8 +318,8 @@
 \titlespacing{\subsection}{\xdu@CJK@twochars}{2ex}{2ex}
 \fi
 \renewcommand{\tableofcontents}{%
-  % \xdu@clearpage%
-  %\phantomsection%
+  %\xdu@clearpage%
+  \phantomsection%
   %\@makeschapterhead{\contentsname}%
   %\chaptermark{\contentsname}%
   \chapter*{\contentsname}%
@@ -801,23 +786,3 @@
 \AtEndOfClass{\input{xduthesis.cfg}}%
 \AtBeginDocument{\CJKindent}
 \AtEndOfClass{\sloppy\xdu@item@space}
-%%
-%% Copyright (C) 2008-2016 by Fei Qi <fred.qi@ieee.org>
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License (LPPL), either
-%% version 1.3c of this license or (at your option) any later
-%% version.  The latest version of this license is in the file:
-%%
-%% http://www.latex-project.org/lppl.txt
-%%
-%% This work is "maintained" (as per LPPL maintenance status) by
-%% Fei Qi.
-%%
-%% This work consists of the file xduthesis.dtx and a Makefile.
-%% Running "make" generates the derived files xduthesis.pdf and xduthesis.cls.
-%% Running "make inst" installs the files in the user's TeX tree.
-%% Running "make install" installs the files in the local TeX tree.
-%%
-%%
-%% End of file `xduthesis.cls'.
