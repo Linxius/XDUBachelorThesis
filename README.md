@@ -4,7 +4,7 @@
 
  由于本人也在使用，所以在使用过程发现任何问题欢迎修改、提issue、提出pull request或是直接与我联系
 
-[email](lqlin96@163.com)
+email:(lqlin96@163.com)
 
 # 使用方法
 为Linux/Unix 环境的使用方便在fonts文件夹中是Windows中的一些字体，请自行安装
