@@ -1,6 +1,3 @@
-# documentation
-xduthesis.pdf
-
 # latex generated fiels
 *.aux
 *.bbl
@@ -17,21 +14,11 @@ xduthesis.pdf
 *.out
 *.toc
 
-# packaging files
-*.tar.gz
-xduthesis*.zip
-
-# Emacs generated files
+# Emacs
 auto/
+.#*
 
 # real file
 parted/
 main.tex
 main.pdf
-
-# SCons generated files
-.sconsign.dblite
-
-# Example directory
-examples/thesis-*.pdf
-examples/xdu*.eps
