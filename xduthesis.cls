@@ -123,13 +123,13 @@
 \renewcommand\normalsize{\@setfontsize\normalsize{12bp}{18bp}}
 \renewcommand\baselinestretch{1.2}
 \setlength{\textwidth}{\paperwidth}
-\addtolength{\textwidth}{-6cm}
+\addtolength{\textwidth}{-5cm}
 \setlength{\textheight}{\paperheight}
 \ifxdu@bachelor
-\addtolength{\textheight}{-4.5cm}
-\setlength{\topmargin}{1.45cm-1in}
+\addtolength{\textheight}{-5cm}
+\setlength{\topmargin}{2cm-1in}
 \setlength{\headheight}{20pt}
-\setlength{\headsep}{0.6cm}
+\setlength{\headsep}{1cm}
 \setlength{\footskip}{18pt}
 \else
 \addtolength{\textheight}{-5.5cm}
@@ -142,7 +142,7 @@
 \fi
 \setlength\marginparwidth{0cm}
 \setlength\marginparsep{0cm}
-\setlength{\oddsidemargin}{4cm-1in}
+\setlength{\oddsidemargin}{3cm-1in}
 \setlength{\evensidemargin}{2cm-1in}
 \def\xdu@clearpage{%
   \clearpage%
@@ -162,7 +162,7 @@
   \hbox to\textwidth{%
     \hfil{\wuhao\noindent\leftmark}\hfil%
     {\ifxdu@bachelor\xiaowu\thepage\hskip1pt\fi}}}
-\def\ps@xdu@header@righttext{%
+\def\ps@xdu@header@righttext{
   \hbox to\textwidth{%
     {\ifxdu@bachelor\xiaowu\thepage\hskip1pt\fi}%
     \hfil{\let\\=\relax\wuhao\rightmark}\hfil}}
