@@ -69,7 +69,7 @@
 %\setCJKfamilyfont{li}{Adobe Kaiti Std}
 %\setCJKfamilyfont{you}{LiSu}
 %\else
-%\setCJKmainfont{Adobe Song Std}
+%\setCJKmainfont{Adobe Song Std}%
 %\setCJKsansfont{Adobe Heiti Std}
 %\setCJKfamilyfont{song}{Adobe Song Std}
 %\setCJKfamilyfont{hei}{Adobe Heiti Std}
@@ -123,27 +123,43 @@
 \renewcommand\normalsize{\@setfontsize\normalsize{12bp}{18bp}}
 \renewcommand\baselinestretch{1.2}
 \setlength{\textwidth}{\paperwidth}
-\addtolength{\textwidth}{-5cm}
 \setlength{\textheight}{\paperheight}
-\ifxdu@bachelor
+\addtolength{\textwidth}{-5cm}
 \addtolength{\textheight}{-5cm}
-\setlength{\topmargin}{2cm-1in}
+\setlength{\topmargin}{3cm}
 \setlength{\headheight}{20pt}
-\setlength{\headsep}{1cm}
+\setlength{\headsep}{0.6cm}
 \setlength{\footskip}{18pt}
-\else
-\addtolength{\textheight}{-5.5cm}
-\setlength\voffset{3cm-1in}
-\setlength{\topmargin}{-5ex}
-\setlength{\headheight}{3ex}
-\setlength{\headsep}{2ex}
-\setlength{\footskip}{5ex}
-\addtolength{\textheight}{-3ex}
-\fi
-\setlength\marginparwidth{0cm}
-\setlength\marginparsep{0cm}
-\setlength{\oddsidemargin}{3cm-1in}
-\setlength{\evensidemargin}{2cm-1in}
+%\ifxdu@bachelor
+%\addtolength{\textheight}{-4.5cm}
+%\setlength{\topmargin}{1.45cm-1in}
+%\setlength{\headheight}{20pt}
+%\setlength{\headsep}{0.6cm}
+%\setlength{\footskip}{18pt}
+%\else
+%\addtolength{\textheight}{-5.5cm}
+%\setlength\voffset{3cm-1in}
+%\setlength{\topmargin}{-5ex}
+%\setlength{\headheight}{3ex}
+%\setlength{\headsep}{2ex}
+%\setlength{\footskip}{5ex}
+%\addtolength{\textheight}{-3ex}
+%\fi
+%\setlength\marginparwidth{0cm}
+%\setlength\marginparsep{0cm}
+%\setlength{\oddsidemargin}{4cm-1in}
+%\setlength{\evensidemargin}{2cm-1in}
+
+%% set margin with left:3cm,right:2cm,up:3cm,down:2cm
+\oddsidemargin 1.46 true cm
+\evensidemargin -0.54 true cm
+\topmargin -0.54 true cm
+\headheight 12.9pt
+\headsep 17.3527pt
+\textheight 24.7 true cm
+\textwidth 15 true cm
+\footskip 0 cm
+\parskip 0.5ex plus 0.25ex minus 0.25ex
 \def\xdu@clearpage{%
   \clearpage%
   \if@openright%
@@ -162,7 +178,7 @@
   \hbox to\textwidth{%
     \hfil{\wuhao\noindent\leftmark}\hfil%
     {\ifxdu@bachelor\xiaowu\thepage\hskip1pt\fi}}}
-\def\ps@xdu@header@righttext{
+\def\ps@xdu@header@righttext{%
   \hbox to\textwidth{%
     {\ifxdu@bachelor\xiaowu\thepage\hskip1pt\fi}%
     \hfil{\let\\=\relax\wuhao\rightmark}\hfil}}
@@ -188,14 +204,14 @@
   \let\@evenfoot\@empty}
 
 \def\ps@xdu@cabstract{%
-  \def\@oddhead{\vbox{\ps@xdu@header@cnonumber\ps@xdu@header@rules}}%
-  \def\@evenhead{\vbox{\ps@xdu@header@cnonumber\ps@xdu@header@rules}}%
+  \def\@oddhead{\vbox{\ps@xdu@header\ps@xdu@header@rules}}%
+  \def\@evenhead{\vbox{\ps@xdu@header@righttext\ps@xdu@header@rules}}%
   \def\@oddfoot{\ps@xdu@footer@text}%
   \def\@evenfoot{\ps@xdu@footer@text}%
 }
 \def\ps@xdu@eabstract{%
-  \def\@oddhead{\vbox{\ps@xdu@header@enonumber\ps@xdu@header@rules}}%
-  \def\@evenhead{\vbox{\ps@xdu@header@enonumber\ps@xdu@header@rules}}%
+  \def\@oddhead{\vbox{\ps@xdu@header\ps@xdu@header@rules}}%
+  \def\@evenhead{\vbox{\ps@xdu@header@righttext\ps@xdu@header@rules}}%
   \def\@oddfoot{\ps@xdu@footer@text}%
   \def\@evenfoot{\ps@xdu@footer@text}%
 }
@@ -613,22 +629,22 @@
   \fi
 }
 \newcommand{\makecover}{
-%  \begin{titlepage}
-%    \xdu@titlepage
-%  \end{titlepage}
-%  \xdu@clearpage
-%  \thispagestyle{xdu@empty}
-%  \xdu@cheadpage
-%  \xdu@clearpage
-%  \thispagestyle{xdu@empty}
-%  \xdu@eheadpage
-%  \xdu@clearpage
-%  \addtolength{\topmargin}{15pt}
-%  \thispagestyle{xdu@empty}
-%  \xdu@make@declaration
-%  \xdu@clearpage
-%  \addtolength{\topmargin}{-15pt}
-%  \setcounter{page}{1}
+  %\begin{titlepage}
+  %  \xdu@titlepage
+  %\end{titlepage}
+  %\xdu@clearpage
+  %\thispagestyle{xdu@empty}
+  %\xdu@cheadpage
+  %\xdu@clearpage
+  %\thispagestyle{xdu@empty}
+  %\xdu@eheadpage
+  %\xdu@clearpage
+  %\addtolength{\topmargin}{15pt}
+  %\thispagestyle{xdu@empty}
+  %\xdu@make@declaration
+  %\xdu@clearpage
+  %\addtolength{\topmargin}{-15pt}
+  \setcounter{page}{1}
   \xdu@makeabstract
 }
 \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter%
