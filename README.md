@@ -9,7 +9,7 @@ email:(lqlin96@163.com)
 当然，也很欢迎给我点个星星
 
 # 使用方法
-为Linux/Unix 环境的使用方便在fonts文件夹中是Windows中的一些字体，请自行安装
+为Linux/Unix 环境的使用方便在fonts文件夹中是Windows中的一些字体，请自行安装（no_font分支不带有字体）
 
 安装texlive或其他环境
 
