@@ -2,7 +2,7 @@
 
  这个模板是参考[xduthesis](https://github.com/fredqi/xduthesis)修改而来，在此对原作者表示感谢
 
- 由于本人也在使用，所以在使用过程发现任何问题欢迎修改、提issue、提出pull request或是直接与我联系
+ 由于本人也在使用（2019届），所以在使用过程发现任何问题欢迎修改、提issue、提出pull request或是直接与我联系
 
 email:(lqlin96@163.com)
 
